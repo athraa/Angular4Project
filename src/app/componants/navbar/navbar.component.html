@@ -1,0 +1,21 @@
+<body dir="rtl">
+<nav class="navbar navbar-expand-lg"  *ngIf="isLogin" >
+    <div class="container">
+        <a class="navbar-brand" routerLink='/' >نظام ادارة معلومات الايتام  </a>
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink='/'>الصفحة الرئيسية <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['add-orphan']">أضافة يتيم جديد</a>
+      </li>
+     
+    </ul>
+    <div class="form-inline my-2 my-lg-0" >
+      <button class="btn  my-2 my-sm-0" (click)="logout()">تسجيل الخروج</button>
+    </div>
+  </div>
+</div>
+</nav>
+</body>

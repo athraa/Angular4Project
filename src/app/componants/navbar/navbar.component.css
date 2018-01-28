@@ -1,0 +1,19 @@
+nav{
+    background: #463440f0;
+}
+
+*{
+    color: #9ba3ab
+    
+}
+
+button{
+    background: #463440f0;
+    border: #9ba3ab 2px solid;
+    font-weight: bold
+}
+
+a:hover{
+    color:#ffffff; 
+}
+button:hover{color: #fff}

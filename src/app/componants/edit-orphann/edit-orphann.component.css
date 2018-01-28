@@ -1,0 +1,49 @@
+
+   body{
+    direction: rtl;
+    text-align: right;
+    background: #503f4b70;
+    height: 850px;
+}
+  
+  
+  .container{
+    padding-top: 100px;
+    height: 662px;
+    padding-left: 180px;
+}
+input,select,textarea{
+    background: #b2aab0;
+    border: 1.48px solid #2c272b7a;
+}
+
+input:focus,select:focus,textarea:focus{background: #b2aab0;    border: 1.48px solid #2c272b7a;
+}
+
+
+input[type="file"]{
+    border:none;
+    background: none
+}
+::placeholder{
+    color:#08080870
+}
+
+    
+.alert{
+    background: #d240408c;
+    margin-top: 10px;
+    border: #d240408c;
+    color: #8a1a1ab5;
+}
+
+
+button{
+    background-color: #463440f0;
+    color: #9ba3ab;
+}
+
+
+label{
+    color: #463440f0; 
+}

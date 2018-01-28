@@ -1,0 +1,153 @@
+<body dir="rtl">
+        <div class="container">
+          <form (ngSubmit)="mySubmit(ref)" #ref="ngForm" >
+      
+             <!--  ألاسم الثلاثي لليتيم-->
+            <div class="form-group row">
+              <label for="name" class="col-sm-3 col-form-label">الاسم الثلاثي :</label>
+              <div class="col-sm-3">
+                  <input type="text" name="OFName" class="form-control" [(ngModel)]="orphans.OFName" 
+                  #orphanFName="ngModel" required minlength="3" placeholder="اسم اليتيم"/>
+                  
+                  <div *ngIf="orphanFName.errors?.required && orphanFName.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                  <div *ngIf="orphanFName.errors?.minlength && orphanFName.touched" class="alert alert-danger"> يجب ان لا يقل عن 3 حروف  </div>
+              </div>
+      
+              <div class="col-sm-3">
+                  <input type="text" name="OSName" class="form-control" [(ngModel)]="orphans.OSName" 
+                  #orphanSName="ngModel" required minlength="3" placeholder="اسم الاب"/>
+                  
+                  <div *ngIf="orphanSName.errors?.required && orphanSName.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                  <div *ngIf="orphanSName.errors?.minlength && orphanSName.touched" class="alert alert-danger"> يجب ان لا يقل عن 3 حروف  </div>
+              </div>
+      
+              <div class="col-sm-3">
+                  <input type="text" name="OLName" class="form-control" [(ngModel)]="orphans.OLName" 
+                  #orphanLName="ngModel" required minlength="3" placeholder="اسم الجد"/>
+                  
+                  <div *ngIf="orphanLName.errors?.required && orphanLName.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                  <div *ngIf="orphanLName.errors?.minlength && orphanLName.touched" class="alert alert-danger"> يجب ان لا يقل عن 3 حروف  </div>
+              </div>
+              </div>
+              <!-- end -->
+           
+      
+              <!-- اسم الام الثلاثي -->
+              <div class="form-group row">
+                  <label for="Mname" class="col-sm-3 col-form-label">الاسم الأم الثلاثي :</label>
+                  <div class="col-sm-3">
+                      <input type="text" name="MFName" class="form-control" [(ngModel)]="orphans.MFName" 
+                      #MFName="ngModel" required minlength="3" placeholder="الاسم الاول للأم "/>
+                      
+                      <div *ngIf="MFName.errors?.required && MFName.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                      <div *ngIf="MFName.errors?.minlength && MFName.touched" class="alert alert-danger"> يجب ان لا يقل عن 3 حروف  </div>
+                  </div>
+          
+                  <div class="col-sm-3">
+                      <input type="text" name="MSName" class="form-control" [(ngModel)]="orphans.MSName" 
+                      #MSName="ngModel" required minlength="3" placeholder=" الاسم الثاني للأم"/>
+                      
+                      <div *ngIf="MSName.errors?.required && MSName.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                      <div *ngIf="MSName.errors?.minlength && MSName.touched" class="alert alert-danger"> يجب ان لا يقل عن 3 حروف  </div>
+                  </div>
+          
+                  <div class="col-sm-3">
+                      <input type="text" name="MLName" class="form-control" [(ngModel)]="orphans.MLName" 
+                      #MLName="ngModel" required minlength="3" placeholder=" الاسم الثالث للأم"/>
+                      
+                      <div *ngIf="MLName.errors?.required && MLName.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                      <div *ngIf="MLName.errors?.minlength && MLName.touched" class="alert alert-danger"> يجب ان لا يقل عن 3 حروف  </div>
+                  </div>
+                  </div>
+      
+                  <!-- end -->
+      
+      <!--ألعمر  والجنس -->
+            <div class="form-group row">
+                <label for="age" class="col-sm-3 col-form-label">العمر :</label>
+                <div class="col-sm-9">
+                   <input type="number" name="age" class="form-control" [(ngModel)]="orphans.age" #age="ngModel" required />
+                   <div *ngIf="age.errors?.required && age.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                   
+                 </div>
+            </div>
+      
+            <div class="form-group row">
+                <label for="gender" class="col-sm-3 col-form-label">الجنس :</label>
+                 <div class="col-sm-9">
+                      <select class="form-control" name="gender" [(ngModel)]="orphans.gender" #gender="ngModel" required>
+                           <option value="ذكر">ذكر</option>
+                           <option value="انثى">انثى</option>
+                      </select>
+                      <div *ngIf="gender.errors?.required && gender.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>
+                      
+                </div>
+            </div>
+            <!-- end -->
+      
+      
+            <!-- الطول والورن -->
+            <div class="form-group row">
+                  <label for="height" class="col-sm-3 col-form-label">الطول :</label>
+                  <div class="col-sm-9">
+                     <input type="number" name="height" class="form-control" [(ngModel)]="orphans.height" required #height="ngModel" />
+                     <div *ngIf="height.errors?.required && height.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>               
+                   </div>
+              </div>
+      
+              <div class="form-group row">
+                      <label for="weight" class="col-sm-3 col-form-label">الوزن :</label>
+                      <div class="col-sm-9">
+                         <input type="number" name="weight" class="form-control" [(ngModel)]="orphans.weight" #weight="ngModel" required />
+                         <div *ngIf="weight.errors?.required && weight.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>               
+                         
+                       </div>
+              </div>
+            
+            <!-- end -->
+      
+            
+            <!-- الحالة الصحيه -->
+            <div class="form-group row">
+                  <label for="health" class="col-sm-3 col-form-label">الحاله الصحيه :</label>
+                   <div class="col-sm-9">
+                        <select class="form-control" name="health" [(ngModel)]="orphans.health" #health="ngModel" required>
+                             <option value="جيدة">جيدة</option>
+                             <option value="غير جيده">غير جيده</option>
+                        </select>
+                        <div *ngIf="health.errors?.required && health.touched" class="alert alert-danger"> هذا الحقل مطلوب</div>               
+                        
+                  </div>
+              </div>
+            <!-- end -->
+          <!--  image -->
+          <div class="form-group row">
+              <label for="image" class="col-sm-3 col-form-label">صورة اليتيم :</label>
+              <div class="col-sm-9">
+              <input type="file" class="form-control-file" id="image" name="image"  
+              [(ngModel)]="orphans.image">
+              
+              </div>
+           </div>
+      
+        <!-- end -->
+      
+      <!-- textarea -->
+      <div class="form-group row">
+          <label for="info" class="col-sm-3 col-form-label">معلومات اخرى :</label>
+          <div class="col-sm-9">
+                  <textarea class="form-control" name="info" [(ngModel)]="orphans.info"></textarea>
+          </div>
+      </div>
+      
+      
+      <!-- end -->
+              <div class="form-group row">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-9">
+                      <button type="submit" class="btn btn-block" >اضافة يتيم جديد</button>
+                  </div>
+            </div>
+          </form>
+        </div>
+      </body>

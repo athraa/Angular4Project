@@ -1,0 +1,48 @@
+<body dir="rtl">
+  <div class="container">
+    <div *ngIf="orphans">
+     
+       <h2> <i class="fa fa-database" fa-3x></i>      قاعده بيانات الايتام </h2>
+      <h4> العدد الكلي للايتام : {{total}}</h4>
+    
+        <button (click)="filterBy('all')" class="btn" ><i class="fa fa-users"></i>   الكل</button>
+        <button (click)="filterBy('male')" class="btn "><i class="fa fa-male"></i>  الذكور</button>
+        <button (click)="filterBy('female')" class="btn "><i class="fa fa-female"></i>   الاناث</button>
+        <button (click)="filterBy('good')" class="btn " ><i class="fa fa-thumbs-o-up"></i>    الحالة الصحية جيده</button>
+        <button (click)="filterBy('notGood')" class="btn " ><i class="fa fa-thumbs-o-down"></i>    الحاله الصحية غير جيده</button>
+      <br>
+        <table class="table table-hover ">
+          <thead>
+              <tr class="tr-head">
+                  <th scope="col">رقم اليتيم</th>
+                <th scope="col"> الاسم الثلاثي </th>
+                <th scope="col">اسم الام</th>
+                <th scope="col">العمر </th>
+                <th scope="col">الجنس </th>
+                <th scope="col">الحالة الصحيه</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                
+                
+              </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of orphans ; let i = index">
+                   <td>{{i+1}}</td>
+                  <td>{{item.OFName}} {{item.OSName}} {{item.OLName}}</td>                   
+                  <th>{{item.MFName}} {{item.MSName}} {{item.MLName}}</th>
+                  <td>{{item.age}}</td>
+                  <td>{{item.gender}}</td>
+                  <td>{{item.health}}</td>
+                  <td><a [routerLink]="['/edit-orphan/'+item.$key]" href=""><i class="fa fa-pencil-square-o"></i></a></td>                  
+                  <td><a [routerLink]="['more-info/'+item.$key]" href=""><i class="fa fa-info-circle"></i></a></td>
+                  <td><a (click)="Delete(item.$key)"><i class="fa fa-trash-o"></i></a></td>
+                  
+                </tr>
+      </table>
+      </div>
+</div>
+</body>
+

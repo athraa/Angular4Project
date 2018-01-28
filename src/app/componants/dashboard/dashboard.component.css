@@ -1,0 +1,47 @@
+body{
+    direction: rtl;
+    text-align: right;
+    background: #503f4b70;
+    height: 950px;
+    
+}
+h2{
+    padding-top:30px ; 
+    color: #463440f0
+}
+h4{
+    padding-bottom: 20px;
+    color:#2b2929bd
+}
+table{
+    margin-top: 5px;
+    
+}
+
+.tr-head{
+    background: #463440f0;
+    color:#9ba3ab
+}
+
+button{
+    color: #463440f0;
+    background: #e6e6e6a8
+}
+
+.fa-trash-o{
+color:rgb(146, 30, 30);
+font-size: 22px;
+font-weight: bold
+}
+
+.fa-pencil-square-o{
+    font-size: 22px;
+    color: rgb(11, 109, 11)   ;
+    font-weight: bold  
+}
+
+.fa-info-circle{
+    font-size: 22px;  
+    color:#2468b1;
+    font-weight: bold
+}

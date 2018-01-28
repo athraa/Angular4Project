@@ -1,0 +1,35 @@
+body{
+    text-align: right;
+    background: #503f4b70;
+    height: 850px;
+}
+
+.card{
+     flex-direction:row ;
+}
+
+.card-header{
+    background: #463440f0;
+    color: #9ba3ab;
+    padding-top: 345px;
+    padding-right: 40px;
+    max-width: 200px;
+}
+
+img{
+    border-radius: 100%;
+    margin: 15px 220px;
+    width: 300px;
+    height: 300px;
+}
+li{
+    font-size: 18px;
+}
+.card-footer{
+    background: white;
+}
+
+a{
+    width: 130px;
+    margin: 1px 0;
+}

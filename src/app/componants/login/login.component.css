@@ -1,0 +1,48 @@
+body{
+    position: relative;
+    background-image: url(../../../assets/images/buligings.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 662px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: #463440f0;
+    
+}
+
+
+form{
+    background: #9a627975;
+    width: 366px;
+    height: 450px;
+    position: absolute;
+    top: 130px;
+    left: 490px;
+    padding: 30px;
+    
+}
+h1{
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:50px;
+    color: #9ba3ab
+}
+label{color: #9ba3ab}
+input{
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid rgb(119, 117, 119);
+    background: #9a627900;
+    color:black
+}
+input:focus{
+    background: #9a627900;
+    border: 1px solid rgb(119, 117, 119);
+    color: #9ba3ab
+}
+.btn{
+    background:#9ba3ab; 
+}

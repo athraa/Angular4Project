@@ -1,0 +1,20 @@
+<body>
+  <div class="overlay">
+      <div class="container">
+        <form (submit)="Login()">
+          <h1>تسجيل الدخول</h1>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="ادخل الايميل" 
+                name="email" [(ngModel)]="email">
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="ادخل الرقم السري"
+                name="password" [(ngModel)]="password">
+            </div>
+            <button class="btn btn-block" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+</body>

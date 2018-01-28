@@ -1,0 +1,35 @@
+<body dir="rtl">
+  <div class="container">
+      <br/><br/>
+  <div class="card mb-3">
+  <h2 class="card-header">
+    المعلومات الشخصيه
+  </h2>
+ <div class="card-body">
+  <img class="img-thumbnail"  
+  src="{{image}}" alt="orphan image">
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+      الأسم الثلاثي لليتيم : {{orphans.OFName}} {{orphans.OSName}} {{orphans.OLName}}  
+    </li>
+    <li class="list-group-item">اسم الأم الثلاثي:  {{orphans.MFName}} {{orphans.MSName}} {{orphans.MLName}}</li>
+    <li class="list-group-item">العمر : {{orphans.age}}</li>
+    <li class="list-group-item">الجنس : {{orphans.gender}}</li>
+    <li class="list-group-item">الطول : {{orphans.height}}</li>
+    <li class="list-group-item">الورن : {{orphans.weight}}</li>
+    <li class="list-group-item">الحالة الصحيه : {{orphans.health}}</li>
+    <li class="list-group-item">معلومات اخرى : {{orphans.info}}</li>
+   
+  </ul>
+</div>
+  <div class="card-footer ">
+      <a [routerLink]="['/edit-orphan/'+orphans.$key]" class="btn btn-success">Edit</a><br/>
+      <a (click)="Delete(orphans.$key)" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+
+
+
+</div>
+</body>
